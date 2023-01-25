@@ -1,0 +1,4 @@
+r1,92,b232ta60,smirnow
+r2,44,b234te88,ivanova
+r3,67,b876ho12,ryabov
+r5,490,b4,d4
