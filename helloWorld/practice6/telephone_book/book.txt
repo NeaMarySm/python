@@ -1,0 +1,6 @@
+freeman,joseph,petrovich,932243432
+turman,albert,phillipovich,3245244534
+trump,donald,ivanovich,92342435
+vetrov,evgeniy,fedorovich,465837652876
+frolova,katerina,egorovna,25672432
+john,smith,,324
