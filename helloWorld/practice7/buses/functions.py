@@ -18,14 +18,16 @@ def show_commands(commands):
 
 
 def show_route_detail(routes, drivers, buses):
-    for el in routes:
+    temp_list = []
+    for i in range(0, len(routes)):
+        temp_list.append(routes[i].copy())
         for driver in drivers:
-            if el[3] == driver[0]:
-                el[3] = driver[1]
+            if routes[i][3] == driver[0]:
+                temp_list[i][3] = driver[1]
         for bus in buses:
-            if el[2] == bus[0]:
-                el[2] = bus[1]
-        show_route(el)
+            if routes[i][2] == bus[0]:
+                temp_list[i][2] = bus[1]
+        show_route(temp_list[i])
 
 
 def show_driver(record):
@@ -79,3 +81,11 @@ def add_route(path, routes):
     result_record = [id, number, bus_id, driver_id]
     routes.append(result_record)
     save_data_to_file(path, routes)
+
+
+def delete_record(path, records_list):
+    id = input('Enter id of the record: ')
+    for record in records_list:
+        if record[0] == id:
+            records_list.remove(record)
+    save_data_to_file(path, records_list)
