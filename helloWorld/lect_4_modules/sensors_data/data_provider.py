@@ -1,7 +1,24 @@
-def get_temperature():
+import imp
+from random import randint
 
 
-def get_pressure():
+def get_temperature(sensor):
+    if sensor:
+        return randint(-20, 0)
+    else:
+        return randint(0, 20)
 
 
-def get_wind_speed():
+def get_pressure(sensor):
+    return randint(720, 750) if sensor else randint(750, 770)
+
+
+def get_wind_speed(sensor):
+    if sensor == 1:
+        return randint(0, 30)
+    else:
+        return randint(30, 50)
+
+
+def data_collection(sensor=1):
+    return (get_temperature(sensor), get_pressure(sensor), get_wind_speed(sensor))
